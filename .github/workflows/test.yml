@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Get public IP of GitHub runner
+        run: |
+          curl ifconfig.me
+
       - name: Checkout code
         uses: actions/checkout@v2
 
